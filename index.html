@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicPlayer</title>
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./asset/css/style.css">
+
+</head>
+<body>
+    <div class="music">
+        <div class="dashboard">
+            <h3 class="header">Music Play</h3>
+            <div class="cd cd_pause" style="background-image: url(/asset/img/img1.jpg);"></div>
+            <h4 class="title">Con Hứa Sẽ Về</h4>
+            <h6 class="author">Lê Bảo Bình</h6>
+
+            <input type="range" name="time" id="time_music" class="time_music" max="" min="">
+            <div class="time_song">
+                <p class="currant_time"></p>
+                <p class="duration"></p>
+            </div>
+            <div class="volume">
+                <div class="valume_icon">
+                    <i class="fa-solid fa-volume-high"></i>
+                </div>
+                <div class="volume_input">
+                    <input type="range" name="volume"  class="volume_music" onChange="setVolume()" min="0" max="1" value="0.8" step="0.1">
+                </div>
+            </div>
+            <audio  src="./asset/music/song1.mp3" class="song"></audio>
+
+            <div class="control">
+                <div class="repeat btn">
+                    <i class="repeat_btn fa-solid fa-repeat"  style="color: rgba(0, 0, 0, 0.8);"></i>
+                </div>
+
+                <div class="back btn">
+                    <i class=" fa-solid fa-backward"></i>
+                </div>
+
+                <div class="play btn">
+                    <i class=" fa-solid fa-play"></i>
+                </div>
+
+                <div class="next btn">
+                    <i class=" fa-solid fa-forward"></i>
+                </div>
+
+                <div class="random btn" >
+                    <i class="random_btn fa-solid fa-shuffle" style="color: rgba(0, 0, 0, 0.8);"></i>
+                </div>
+            </div>
+
+            <div class="wave">
+                <div class="wave_item item_1" ></div>
+                <div class="wave_item item_2" ></div>
+                <div class="wave_item item_3" ></div>
+                <div class="wave_item item_4" ></div>
+                <div class="wave_item item_5" ></div>
+                <div class="wave_item item_6" ></div>
+                <div class="wave_item item_7" ></div>
+                <div class="wave_item item_8" ></div>
+                <div class="wave_item item_9" ></div>
+
+            </div>
+
+            <div class="nav_bar">
+                <div class="like_song">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <i class="show_bar_play_list fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="bar_play_list">
+            <div class="bar_play_list_item">
+                <div class="bar_play_list_exit">
+                    <div class="bar_header">
+                        <i class="fa-solid fa-music"></i>
+                        <p class="bar_header_name">
+                            Play List Music
+                        </p>
+                    </div>
+                    <i class="bar_down fa-solid fa-chevron-down"></i>
+                </div>
+
+                <div class="play_list">
+                    <div class="play_item">
+                        <div class="img_song" style="background-image: url(/asset/img/img1.jpg);"></div>
+                        <div class="content_song">
+                            <h4 class="name_song">Con Hứa Sẽ Về</h4>
+                            <h6 class="author_song">Lê Bảo Bình</h6>
+                        </div>
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
